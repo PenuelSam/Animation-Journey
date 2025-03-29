@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raindrop Animation (Vanilla JS)</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rain"></div> 
+</body>
+<script src="app.js"></script>
+<!--<script>
+    const numDrops = 400; // Adjust for performance
+    const rainContainer = document.querySelector('.rain');
+
+    function randRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function createRain() {
+        for (let i = 0; i < numDrops; i++) {
+            let drop = document.createElement('div');
+            drop.classList.add('drop');
+
+            let startX = randRange(0, window.innerWidth);
+            let startY = randRange(-100, window.innerHeight);
+            let speed = randRange(2, 4); // Speed variation
+            let opacity = randRange(0.3, 1);
+
+            drop.style.left = `${startX}px`;
+            drop.style.top = `${startY}px`;
+            drop.style.opacity = opacity;
+
+            rainContainer.appendChild(drop);
+
+            animateDrop(drop, startY, speed);
+        }
+    }
+
+    function animateDrop(drop, startY, speed) {
+        let posY = startY;
+
+        function fall() {
+            posY += speed;
+            drop.style.transform = `translateY(${posY}px)`;
+
+            if (posY > window.innerHeight) {
+                posY = randRange(-100, -10);
+                drop.style.left = `${randRange(0, window.innerWidth)}px`;
+            }
+
+            requestAnimationFrame(fall);
+        }
+
+        fall();
+    }
+
+    createRain();
+</script>-->
+</html>
