@@ -8,6 +8,7 @@ canvas.style.backgroundColor = "#ddd";
 canvasContainer.appendChild(canvas);
 
 
+
 // Create color picker input
 toolbar = document.createElement("div");
 toolbar.style.position = "absolute";
