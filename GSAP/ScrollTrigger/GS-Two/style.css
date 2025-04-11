@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    min-height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+    z-index: 100000;
+    color: #fff;
+    mix-blend-mode: difference;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cards{
+    position: absolute;
+    width: 75vw;
+    height: 50rem;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cards li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 75vw;
+    height: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+li:nth-child(1) {
+    background: url("../../images/image1.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(2) {
+    background: url("../../images/image2.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(3) {
+    background: url("../../images/image3.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(4) {
+    background: url("../../images/image4.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(5) {
+    background: url("../../images/image5.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(6) {
+    background: url("../../images/image6.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(7) {
+    background: url("../../images/image7.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(8) {
+    background: url("../../images/image8.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(9) {
+    background: url("../../images/image9.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(10) {
+    background: url("../../images/image10.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(11) {
+    background: url("../../images/image11.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(12) {
+    background: url("../../images/image12.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(13) {
+    background: url("../../images/image1.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(14) {
+    background: url("../../images/image2.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(15) {
+    background: url("../../images/image3.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(16) {
+    background: url("../../images/image4.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(17) {
+    background: url("../../images/image5.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(18) {
+    background: url("../../images/image6.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(19) {
+    background: url("../../images/image7.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(20) {
+    background: url("../../images/image8.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(21) {
+    background: url("../../images/image9.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(22) {
+    background: url("../../images/image10.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(23) {
+    background: url("../../images/image11.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+li:nth-child(24) {
+    background: url("../../images/image12.jpeg") no-repeat 50% 50%;
+    background-size: cover;
+}
