@@ -1,13 +1,16 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-// initialize the scene
-const scene = new THREE.Scene();
 
-// add objects to the scene
-const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
-const cubeMaterial = new THREE.MeshBasicMaterial({ color: "red", wireframe: true });
-const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
+/*create custom geometry*/
+// const vertices = new Float32Array([0, 0, 0, 0, 2, 0, 2, 0, 0])
+// const bufferAttribute = new THREE.BufferAttribute(vertices, 3)
+// const geometry = new THREE.BufferGeometry();
+// geometry.setAttribute('position', bufferAttribute)
+
+
+
+
 //  cubeMesh.position.y = 1
 //  cubeMesh.position.x = 1
 // cubeMesh.scale.setScalar(0.5)
@@ -15,27 +18,38 @@ const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
 // cubeMesh2.position.x = 2;
 // const cubeMesh3 = new THREE.Mesh(cubeGeometry, cubeMaterial);
 // cubeMesh3.position.x = -2;
-
 // const group = new THREE.Group();
 // group.add(cubeMesh);
 // group.add(cubeMesh2);
 // group.add(cubeMesh3);
-
 // group.position.y = 2;
-  
 // group.scale.setScalar(2)
-
 // scene.add(group)
+
 //cubeMesh.scale.set(2, 2, 1)
-
-scene.add(cubeMesh);
-
 // cubeMesh.rotation.reorder('YXZ')
-
 //  cubeMesh.rotation.y = THREE.MathUtils.degToRad(90)
 //  cubeMesh.rotation.x = THREE.MathUtils.degToRad(45)
 // const axesHelper = new THREE.AxesHelper(5);
 // cubeMesh.add(axesHelper);
+
+
+
+/*initialize the scene*/
+const scene = new THREE.Scene();
+
+// add objects to the scene
+// const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
+// const geometry = new THREE.SphereGeometry(1, 16, 16)
+// const geometry = new THREE.PlaneGeometry(1, 1, 2, 2)
+const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16)
+
+const cubeMaterial = new THREE.MeshBasicMaterial({ color: "red", wireframe: true });
+
+const cubeMesh = new THREE.Mesh(geometry, cubeMaterial);
+
+scene.add(cubeMesh);
+
 
 // initialize the camera
 const camera = new THREE.PerspectiveCamera(
@@ -60,7 +74,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 // instantiate the controls
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
-// controls.autoRotate = true;
+//controls.autoRotate = true;
 
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -69,18 +83,18 @@ window.addEventListener("resize", () => {
 });
 
 // initialize clock
-const clock = new THREE.Clock();
-let previousTime = 0
+// const clock = new THREE.Clock();
+// let previousTime = 0
 
 // render the scene
 const renderloop = () => {
-  const currentTime = clock.getElapsedTime();
-  const delta = currentTime - previousTime
-  previousTime = currentTime
+  // const currentTime = clock.getElapsedTime();
+  // const delta = currentTime - previousTime
+  // previousTime = currentTime
 
-  cubeMesh.rotation.y += THREE.MathUtils.degToRad(1) * delta * 20
-  cubeMesh.scale.x = (Math.sin(currentTime)) * 20 + 2
-  cubeMesh.position.x = (Math.sin(currentTime)) + 2
+  // cubeMesh.rotation.y += THREE.MathUtils.degToRad(1) * delta * 20
+  // cubeMesh.scale.x = (Math.sin(currentTime)) * 20 + 2
+  // cubeMesh.position.x = (Math.sin(currentTime)) + 2
 
   controls.update();
   renderer.render(scene, camera);
